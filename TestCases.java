@@ -21,6 +21,33 @@ public class TestCases
    public static final double DELTA = 0.00001;
 
    /* some sample tests but you must write more! see lab write up */
+   @Test
+   public void testTriangleeGetArea()
+   {
+      Triangle t = new Triangle(new Point(0, 3), new Point(0, 0), new Point(4, 0), Color.cyan);
+      assertEquals(6.0, t.getArea(), DELTA);
+   }
+
+   @Test
+   public void testTriangleGetPerimeter()
+   {
+      Triangle t = new Triangle(new Point(0, 3), new Point(0, 0), new Point(4, 0), Color.cyan);
+      assertEquals(12.0, t.getPerimeter(), DELTA);
+   }
+
+   @Test
+   public void testRectangleGetArea()
+   {
+      Rectangle r = new Rectangle(10.0, 10.0, new Point(20, 20), Color.cyan);
+      assertEquals(100.0, r.getArea(), DELTA);
+   }
+
+   @Test
+   public void testRectangleGetPerimeter()
+   {
+      Rectangle r = new Rectangle(10.0, 10.0, new Point(20, 20), Color.cyan);
+      assertEquals(40.0, r.getPerimeter(), DELTA);
+   }
 
    @Test
    public void testCircleGetArea()
