@@ -48,7 +48,7 @@ public class WorkSpace {
     public List getShapesByColor(Color color) {
         List<Shape> colored = new ArrayList<>();
         for (Shape shape: shapes) {
-            if (shape instanceof Circle)
+            if (shape.getColor() == color)
                 colored.add(shape);
         }
         return colored;
