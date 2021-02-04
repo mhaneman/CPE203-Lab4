@@ -25,6 +25,10 @@ public class Circle implements Shape{
 
     public boolean equals(Object o) {
         if (o instanceof Circle)
+            System.out.println(this.radius == ((Circle) o).radius);
+            System.out.println(this.center == ((Circle) o).center);
+            System.out.println(this.color == ((Circle) o).color);
+
             if (this.radius == ((Circle) o).radius &&
                     this.center == ((Circle) o).center &&
                     this.color == ((Circle) o).color)
