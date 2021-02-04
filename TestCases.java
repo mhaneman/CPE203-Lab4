@@ -30,8 +30,8 @@ public class TestCases
       Circle c3 = new Circle(5.678, new Point(2, 4), Color.BLACK);
 
       assertEquals(false, c1.equals(null));
-      assertEquals(false, c1.equals(c3));
       assertEquals(true, c1.equals(c2));
+      assertEquals(false, c1.equals(c3));
 
 
    }
