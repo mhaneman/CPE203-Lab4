@@ -28,7 +28,9 @@ public class Triangle implements Shape {
 
     public boolean equals(Object o) {
         if (o instanceof Triangle)
-            if (this.getClass() == o.getClass())
+            if (this.a == ((Triangle) o).a &&
+                    this.b == ((Triangle) o).b &&
+                    this.c == ((Triangle) o).c)
                 return true;
         return false;
     }
