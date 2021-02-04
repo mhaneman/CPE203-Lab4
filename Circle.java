@@ -24,16 +24,12 @@ public class Circle implements Shape{
     }
 
     public boolean equals(Object o) {
-        if (o instanceof Circle)
-            System.out.println((this.radius == ((Circle) o).radius) + " radius");
-            System.out.println((this.center == ((Circle) o).center) + "center");
-            System.out.println((this.color == ((Circle) o).color) + "color");
-            System.out.println("-------------------------");
-
-            if (this.radius == ((Circle) o).radius &&
-                    this.center == ((Circle) o).center &&
-                    this.color == ((Circle) o).color)
-                return true;
+        if (o != null)
+            if (o instanceof Circle)
+                if (this.radius == ((Circle) o).radius &&
+                        this.center == ((Circle) o).center &&
+                        this.color == ((Circle) o).color)
+                    return true;
         return false;
 
     }
