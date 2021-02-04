@@ -35,12 +35,13 @@ public class Rectangle implements Shape{
     }
 
     public boolean equals(Object o) {
-        if (o instanceof Rectangle)
-            if (this.width == ((Rectangle) o).width &&
-                    this.height == ((Rectangle) o).height &&
-                    this.topLeft == ((Rectangle) o).topLeft &&
-                    this.color == ((Rectangle) o).color)
-                return true;
+        if (o != null)
+            if (o instanceof Rectangle)
+                if (this.width == ((Rectangle) o).width &&
+                        this.height == ((Rectangle) o).height &&
+                        this.topLeft.equals(((Rectangle) o).topLeft) &&
+                        this.color.equals(((Rectangle) o).color))
+                    return true;
         return false;
     }
 
