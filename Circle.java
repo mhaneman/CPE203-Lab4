@@ -24,8 +24,9 @@ public class Circle implements Shape{
     }
 
     public boolean equals(Object o) {
-        if (this.getClass() == o.getClass())
-            return true;
+        if (o instanceof Circle)
+            if (this.getClass() == o.getClass())
+                return true;
         return false;
 
     }

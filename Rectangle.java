@@ -35,8 +35,9 @@ public class Rectangle implements Shape{
     }
 
     public boolean equals(Object o) {
-        if (this.getClass() == o.getClass())
-            return true;
+        if (o instanceof Rectangle)
+            if (this.getClass() == o.getClass())
+                return true;
         return false;
 
     }

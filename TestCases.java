@@ -25,9 +25,14 @@ public class TestCases
    @Test
    public void testCircleEquals()
    {
-      Circle c = new Circle(5.678, new Point(2, 3), Color.BLACK);
+      Circle c1 = new Circle(5.678, new Point(2, 3), Color.BLACK);
+      Circle c2 = new Circle(5.678, new Point(2, 3), Color.BLACK);
+      Circle c3 = new Circle(5.678, new Point(2, 4), Color.BLACK);
 
-      assertEquals(false, c.equals(null));
+      assertEquals(false, c1.equals(null));
+      assertEquals(false, c1.equals(c3));
+      assertEquals(true, c1.equals(c2));
+
 
    }
    @Test
