@@ -21,6 +21,15 @@ public class TestCases
    public static final double DELTA = 0.00001;
 
    /* some sample tests but you must write more! see lab write up */
+
+   @Test
+   public void testCircleEquals()
+   {
+      Circle c = new Circle(5.678, new Point(2, 3), Color.BLACK);
+
+      assertEquals(false, c.equals(null));
+
+   }
    @Test
    public void testTriangleeGetArea()
    {
